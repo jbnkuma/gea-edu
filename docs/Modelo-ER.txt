@@ -1,0 +1,8 @@
+Los sripts sql incluidos en el presentre proyecto fueron creados pos las herramientas case Oracle SQL Data Modeling y Mysql Workbench, ambos herramientas usadas para mejorar el diagrama ER de el presente sistema.
+
+Para mayor informacion de este software aqui utilizado consulte:
+
+http://www.oracle.com/technology/products/database/datamodeler/index.html
+
+http://dev.mysql.com/workbench/
+
