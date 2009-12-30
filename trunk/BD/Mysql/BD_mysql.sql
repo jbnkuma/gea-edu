@@ -2,7 +2,6 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-DROP SCHEMA IF EXISTS `gea-edu` ;
 CREATE SCHEMA IF NOT EXISTS `gea-edu` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci ;
 USE `gea-edu`;
 
@@ -16,8 +15,8 @@ CREATE  TABLE IF NOT EXISTS `gea-edu`.`Catedratico` (
   `Apeido_Materno` VARCHAR(45) NOT NULL ,
   `Hora_entrda` VARCHAR(45) NOT NULL ,
   `Hora_salida` VARCHAR(45) NOT NULL ,
-  `Telefono` VARCHAR(45) NULL ,
-  `Email` VARCHAR(45) NULL ,
+  `Telefono` VARCHAR(45) NULL DEFAULT NULL ,
+  `Email` VARCHAR(45) NULL DEFAULT NULL ,
   PRIMARY KEY (`Clave`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
@@ -68,16 +67,15 @@ CREATE  TABLE IF NOT EXISTS `gea-edu`.`Alumno` (
   `Numero_de_cuenta` VARCHAR(10) NOT NULL ,
   `Apeido_Paterno` VARCHAR(45) NOT NULL ,
   `Apeido_Materno` VARCHAR(45) NOT NULL ,
-  `Telefono` VARCHAR(45) NULL ,
-  `Email` VARCHAR(45) NULL ,
+  `Telefono` VARCHAR(45) NULL DEFAULT NULL ,
+  `Email` VARCHAR(45) NULL DEFAULT NULL ,
   `Grupo_idGrupo` VARCHAR(10) NOT NULL ,
   `Grupo_Horario_idHorario` VARCHAR(12) NOT NULL ,
-  `Grupo_Horario_Catedratico_Clave` VARCHAR(30) NOT NULL ,
-  PRIMARY KEY (`Numero_de_cuenta`, `Grupo_idGrupo`, `Grupo_Horario_idHorario`, `Grupo_Horario_Catedratico_Clave`) ,
-  INDEX `fk_Alumno_Grupo1` (`Grupo_idGrupo` ASC, `Grupo_Horario_idHorario` ASC, `Grupo_Horario_Catedratico_Clave` ASC) ,
+  PRIMARY KEY (`Numero_de_cuenta`, `Grupo_idGrupo`, `Grupo_Horario_idHorario`) ,
+  INDEX `fk_Alumno_Grupo1` (`Grupo_idGrupo` ASC, `Grupo_Horario_idHorario` ASC) ,
   CONSTRAINT `fk_Alumno_Grupo1`
-    FOREIGN KEY (`Grupo_idGrupo` , `Grupo_Horario_idHorario` , `Grupo_Horario_Catedratico_Clave` )
-    REFERENCES `gea-edu`.`Grupo` (`idGrupo` , `Horario_idHorario` , `Horario_Catedratico_Clave` )
+    FOREIGN KEY (`Grupo_idGrupo` , `Grupo_Horario_idHorario` )
+    REFERENCES `gea-edu`.`Grupo` (`idGrupo` , `Horario_idHorario` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -92,7 +90,7 @@ CREATE  TABLE IF NOT EXISTS `gea-edu`.`Materia` (
   `Clave` VARCHAR(30) NOT NULL ,
   `Nombre` VARCHAR(45) NOT NULL ,
   `Semestre` VARCHAR(45) NOT NULL ,
-  `Creditos` VARCHAR(45) NULL ,
+  `Creditos` VARCHAR(45) NULL DEFAULT NULL ,
   `Horario_idHorario` VARCHAR(12) NOT NULL ,
   PRIMARY KEY (`Clave`, `Horario_idHorario`) ,
   INDEX `fk_Materia_Horario1` (`Horario_idHorario` ASC) ,
