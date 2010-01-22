@@ -1,4 +1,4 @@
-<!--
+
 body {
 	padding: 0px;
 	margin: 0px;
@@ -41,4 +41,72 @@ body {
 	height: 20px;
 }
 
--->
+.dropsahdow{
+	float:left;
+	clear:left;
+	background: url(./imagenes/geacui.png) no-repeat bottom center !important;
+	background: url(./imagenes/geacui.png) no-repeat bottom right;
+	margin: 20px 0 30px !important;
+	margin: 10px 0 10px 50px;
+	padding:0px;
+}
+
+.innerbox{
+	position:relative;
+	bottom:6px;
+	rigth:6px;
+	border: 1px solid #999999;
+	padding:4px;
+	margin: 0px 0px 0px 0px;
+}
+
+#contenedor{
+	width: 700px;
+	}
+
+#cabecera{	
+	margin-left: 270px;
+
+}
+
+#menu1{
+	Float:left;
+	width: 550px;
+	margin-left:100px;
+}
+
+#pie{
+	clear:both;
+}
+
+ul{
+	width: 180px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	margin: 1em 0;
+	float:left;
+	clear:left;
+}
+
+a.boton{
+	text-decoration: none;
+	backgound: #EE;
+	color: #222;
+	border: 1px outset #CCC;
+	padding: .1em .5em;
+}
+
+a.boton:hover{
+	background: #CC8;
+}
+
+a.boton:active{
+	border: 1px inset #000;
+	}
+
+
+
