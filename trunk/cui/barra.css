@@ -61,18 +61,20 @@ body {
 }
 
 #contenedor{
-	width: 700px;
+/*marca el ancho del contenedor en la pantalla*/
+	width: 900px;   
+/*Centra el contenedor en la pantalla de el nacegador*/
+	margin: 0 auto;
 	}
 
 #cabecera{	
-	margin-left: 270px;
 
 }
 
 #menu1{
 	Float:left;
 	width: 550px;
-	margin-left:100px;
+	margin-left:50px;
 }
 
 #pie{
@@ -108,5 +110,8 @@ a.boton:active{
 	border: 1px inset #000;
 	}
 
-
+img {
+   display: block;
+   margin: auto;
+ }
 
