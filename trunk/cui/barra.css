@@ -65,16 +65,24 @@ body {
 	width: 900px;   
 /*Centra el contenedor en la pantalla de el nacegador*/
 	margin: 0 auto;
+	/*border: 5px solid #000000;*/
 	}
 
-#cabecera{	
-
+#cabecera{
 }
 
 #menu1{
 	Float:left;
-	width: 550px;
+	width: 110px;
 	margin-left:50px;
+	border: 2px solid #000000;
+}
+
+#contenido {
+	float: left;
+	width: 726px;
+	hight:  100px;
+	border: 2px solid #000000;
 }
 
 #pie{
@@ -114,4 +122,3 @@ img {
    display: block;
    margin: auto;
  }
-
