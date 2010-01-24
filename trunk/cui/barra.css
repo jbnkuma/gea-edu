@@ -1,45 +1,10 @@
 
-body {
+/*body {
 	padding: 0px;
 	margin: 0px;
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-#menu ul {
-	padding: 0px;
-	margin: 0px;
-	background-image: url("de_resguardo.jpg");
-	background-repeat: repeat;
-	background-position: 0 0;
-	background-color: #333;
-	list-style: none;
-	font-size: 14px;
-	font-weight: bold;
-	width: 100%;
-	height: 30px;
-	float: left;
-}
-
-#menu ul li {
-	display: inline;
-}
-
-#menu ul li a:link, #menu ul li a:visited {
-	background-image: url("de_resguardo.jpg");
-	background-repeat: repeat;
-	background-position: 0 0;
-	color: #000000;
-	padding: 5px 15px;
-	float: left;
-	text-decoration: none;
-}
-
-#menu ul li a:hover, #menu ul li a:active{
-	color: #900;
-	background-position: 0 -30px;
-	background-color: #ccc;
-	height: 20px;
-}
 
 .dropsahdow{
 	float:left;
@@ -58,31 +23,67 @@ body {
 	border: 1px solid #999999;
 	padding:4px;
 	margin: 0px 0px 0px 0px;
+}*/
+
+#menu ul {
+	padding: 0px;
+	margin: 0px;
+	background-image: url("./de_resguardo.jpg");
+	background-repeat: repeat;
+	background-position: 0 0;
+	background-color: #333;
+	list-style: none;
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	height: 30px;
+	float: left;
+}
+
+#menu1 ul li {
+	display: inline;
+}
+
+#menu1 ul li a:link, #menu ul li a:visited {
+	background-image: url("de_resguardo.jpg");
+	background-repeat: repeat;
+	background-position: 0 0;
+	color: #000000;
+	padding: 5px 15px;
+	float: left;
+	text-decoration: none;
+}
+
+#menu1 ul li a:hover, #menu ul li a:active{
+	color: #900;
+	background-position: 0 -30px;
+	background-color: #ccc;
+	height: 20px;
 }
 
 #contenedor{
 /*marca el ancho del contenedor en la pantalla*/
-	width: 900px;   
+	width: 1000px;   
 /*Centra el contenedor en la pantalla de el nacegador*/
 	margin: 0 auto;
+	/*border: 5px solid #000000;*/
 	}
 
-#cabecera{	
-	margin-left: 300px;
+#cabecera{
 }
 
 #menu1{
 	Float:left;
 	width: 110px;
 	margin-left:50px;
-	border: 2px solid #000000;
+	/*border: 2px solid #000000;*/
 }
 
 #contenido {
 	float: left;
-	width: 726px;
-	hight:  100px;
-	border: 2px solid #000000;
+	width: 526px;
+	margin-left:50px;
+	/*border: 2px solid #000000;*/
 }
 
 #pie{
@@ -118,7 +119,7 @@ a.boton:active{
 	border: 1px inset #000;
 	}
 
-img {
+img{
    display: block;
    margin: auto;
  }
