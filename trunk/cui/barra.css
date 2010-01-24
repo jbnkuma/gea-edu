@@ -65,10 +65,10 @@ body {
 	width: 900px;   
 /*Centra el contenedor en la pantalla de el nacegador*/
 	margin: 0 auto;
-	/*border: 5px solid #000000;*/
 	}
 
-#cabecera{
+#cabecera{	
+	margin-left: 300px;
 }
 
 #menu1{
@@ -96,7 +96,7 @@ ul{
 	padding: 0;
 }
 
-a {
+a{
 	margin: 1em 0;
 	float:left;
 	clear:left;
