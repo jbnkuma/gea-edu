@@ -1,11 +1,5 @@
 
-/*body {
-	padding: 0px;
-	margin: 0px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-
+/*
 .dropsahdow{
 	float:left;
 	clear:left;
@@ -24,6 +18,13 @@
 	padding:4px;
 	margin: 0px 0px 0px 0px;
 }*/
+
+body {
+	font-size: 100%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
 
 #menu ul {
 	padding: 0px;
@@ -63,29 +64,35 @@
 
 #contenedor{
 /*marca el ancho del contenedor en la pantalla*/
-	width: 1000px;   
+	width: 50em;   
 /*Centra el contenedor en la pantalla de el nacegador*/
 	margin: 0 auto;
-	/*border: 5px solid #000000;*/
+	/*border: 1px solid #000000;*/
+	height: 50em;
+	background-color:#FFFFFF;
 	}
-
 #cabecera{
+	width: 50em;
+	background-color:#FFFFFF;
 }
 
 #menu1{
 	Float:left;
-	width: 110px;
-	margin-left:50px;
+	width: 0.9em;
+	margin-left:2em;
 	/*border: 2px solid #000000;*/
 }
 
 #contenido {
 	float: left;
-	width: 526px;
-	margin-left:50px;
+	width: 5em;
+	height: 8em;
+	margin-left:10em;
 	/*border: 2px solid #000000;*/
 }
-
+#capa2{
+	width: 25em;
+}
 #pie{
 	clear:both;
 }
@@ -105,18 +112,18 @@ a{
 
 a.boton{
 	text-decoration: none;
-	backgound: #EE;
-	color: #222;
-	border: 1px outset #CCC;
+	backgound: #000000;
+	color: #000000;
+	border: 1px outset #000000;
 	padding: .1em .5em;
 }
 
 a.boton:hover{
-	background: #CC8;
+	background: #000000;
 }
 
 a.boton:active{
-	border: 1px inset #000;
+	border: 1px inset #000000;
 	}
 
 img{
