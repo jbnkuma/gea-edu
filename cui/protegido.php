@@ -26,7 +26,7 @@ if ($_POST['txtUsername'] != $username || $_POST['txtPassword'] != $password) {
 <br/>
 <br/>
 <br/>
-<h2>GEA-EDU</h2>
+<h2><img src="./imagenes/garra.jpeg" height="35" width="35"/>GEA-EDU</h2>
 
 
 <form name="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
