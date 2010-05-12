@@ -59,7 +59,7 @@ if ($_POST['txtUsername'] != $username || $_POST['txtPassword'] != $password) {
 		</div>
 		<div id="menu1">
 			<ul>
-			  <li><a class="boton" href="">pon algo aqui</a></li>
+			  <li><a class="boton" href="">registrate</a></li>
 			  <li><a class="boton" href="">pon algo aqui</a></li>
 			  <li><a class="boton" href="">pon algo aqui</a></li>
 			  <li><a class="boton" href="">pon algo aqui</a></li>
