@@ -1,0 +1,132 @@
+
+/*
+.dropsahdow{
+	float:left;
+	clear:left;
+	background: url(./imagenes/geacui.png) no-repeat bottom center !important;
+	background: url(./imagenes/geacui.png) no-repeat bottom right;
+	margin: 20px 0 30px !important;
+	margin: 10px 0 10px 50px;
+	padding:0px;
+}
+
+.innerbox{
+	position:relative;
+	bottom:6px;
+	rigth:6px;
+	border: 1px solid #999999;
+	padding:4px;
+	margin: 0px 0px 0px 0px;
+}*/
+
+body {
+	font-size: 100%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+
+#menu ul {
+	padding: 0px;
+	margin: 0px;
+	background-image: url("./de_resguardo.jpg");
+	background-repeat: repeat;
+	background-position: 0 0;
+	background-color: #333;
+	list-style: none;
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	height: 30px;
+	float: left;
+}
+
+#menu1 ul li {
+	display: inline;
+}
+
+#menu1 ul li a:link, #menu ul li a:visited {
+	background-image: url("de_resguardo.jpg");
+	background-repeat: repeat;
+	background-position: 0 0;
+	color: #000000;
+	padding: 5px 15px;
+	float: left;
+	text-decoration: none;
+}
+
+#menu1 ul li a:hover, #menu ul li a:active{
+	color: #900;
+	background-position: 0 -30px;
+	background-color: #ccc;
+	height: 20px;
+}
+
+#contenedor{
+/*marca el ancho del contenedor en la pantalla*/
+	width: 50em;   
+/*Centra el contenedor en la pantalla de el nacegador*/
+	margin: 0 auto;
+	/*border: 1px solid #000000;*/
+	height: 50em;
+	background-color:#FFFFFF;
+	}
+#cabecera{
+	width: 50em;
+	background-color:#FFFFFF;
+}
+
+#menu1{
+	Float:left;
+	width: 0.9em;
+	margin-left:2em;
+	/*border: 2px solid #000000;*/
+}
+
+#contenido {
+	float: left;
+	width: 5em;
+	height: 8em;
+	margin-left:10em;
+	/*border: 2px solid #000000;*/
+}
+#capa2{
+	width: 25em;
+}
+#pie{
+	clear:both;
+}
+
+ul{
+	width: 180px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	margin: 1em 0;
+	float:left;
+	clear:left;
+}
+
+a.boton{
+	text-decoration: none;
+	backgound: #000000;
+	color: #000000;
+	border: 1px outset #000000;
+	padding: .1em .5em;
+}
+
+a.boton:hover{
+	background: #000000;
+}
+
+a.boton:active{
+	border: 1px inset #000000;
+	}
+
+img{
+   display: block;
+   margin: auto;
+ }
