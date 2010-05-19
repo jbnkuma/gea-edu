@@ -6,7 +6,33 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   
   <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
-</head>
+<style type="text/css">
+<!--
+.letra {
+	color: #03F;
+	font-family: Verdana, Geneva, sans-serif;
+}
+.titulo {
+	color: #00F;
+	text-decoration: blink;
+	font-weight: bold;
+}
+.cuadrito {
+	background-color: #FF0;
+}
+.cuad {
+	background-color: #FF6;
+	border-top-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	border-left-color: #000;
+}
+.cu {
+	background-color: #FFC;
+	border: medium solid #000;
+}
+-->
+</style></head>
 
 <body>
 
@@ -15,22 +41,22 @@
 <form action="alumno">
 
   <fieldset>
-    <legend>Formulario de Inscripción</legend>
+    <legend class="letra">Formulario de Inscripción</legend>
 	<fieldset>
 	
-        <legend>Datos Personales del Alumno</legend>
-   <div class="requerido">    <label for="n_cuenta">Numero de cuenta </label> <input size="10" type="text" name="n_cuenta" /> </div>
+        <legend class="letra">Datos Personales del Alumno</legend>
+   <div class="requerido">    <label for="n_cuenta" class="letra">Numero de cuenta </label> <input size="10" type="text" name="n_cuenta" /> </div>
 	<div class="requerido">
-    <label for="nombre">Nombre </label> <input size="30" type="text" name="nombre" /> </div>
+    <label for="nombre" class="letra">Nombre </label> <input size="30" type="text" name="nombre" /> </div>
 
     <div class="requerido">
-    <label for="A_paterno">Apellido Paterno </label> <input size="30" type="text" name="A_paterno" /> </div>
+    <label for="A_paterno" class="letra">Apellido Paterno </label> <input size="30" type="text" name="A_paterno" /> </div>
 
     <div class="requerido">
-    <label for="A_materno">Apellido Materno </label> <input size="30" type="text" name="A_materno" /> </div>
+    <label for="A_materno" class="letra">Apellido Materno </label> <input size="30" type="text" name="A_materno" /> </div>
     <div id="requerido">
-    <label for="Edad">Edad </label> 
-    <select id="edad" name="edad">
+    <label for="Edad" class="letra">Edad </label> 
+    <select name="edad" class="letra" id="edad">
       <option id="ed"  selected="selected">15</option>
       <option value="16">16</option>
       <option value="17">17</option>
@@ -81,13 +107,13 @@
      </div>
 
     <div class="requerido">
-    <label for="telefono">Telefono</label> <input size="12" type="text"
+    <label for="telefono" class="letra">Telefono</label> <input size="12" type="text"
     name="telefono" /> </div>
 
     <div class="requerido">
-    <label for="correo_1">E-mail</label> <input name="correo_1" type="text"
-    size="12" /> <label>@ </label> 
-    <select id="cor" name="correo_2">
+    <label for="correo_1" class="letra">E-mail</label> <input name="correo_1" type="text"
+    size="12" /> <label class="letra">@ </label> 
+    <select name="correo_2" class="letra" id="cor">
       <option value="gmail.com" selected="selected">gmail.com</option>
       <option value="hotmail.com">hotmail.com</option>
       <option value="yahoo.com">yahoo.com</option>
@@ -96,26 +122,33 @@
     </select>
      </div>
     <div class="requerido">
-    <label for="Sexo">Sexo</label> 
-    <label for="femenino">F</label><input name="conf_1" type="checkbox"
-    value="femenino" /> <label for="masculino">M</label><input name="conf_1"
+    <label for="Sexo"><span class="letra">Sexo</span></label> 
+    <span class="letra">
+    <label for="femenino">F</label>
+    </span>
+    <label for="femenino"></label><input name="conf_1" type="checkbox"
+    value="femenino" /> <label for="masculino" class="letra">M</label><input name="conf_1"
     type="checkbox" value="masculino"/>
     </div>
     </fieldset>
 
     <fieldset>
-      <legend>Dierección</legend>
-      <p><label>Calle <input size="60" type="text" name="calle"
+      <legend class="letra">Dirección</legend>
+      <p><label><span class="letra">Calle</span>
+        <input size="60" type="text" name="calle"
       /></label></p>
 
-      <p><label>Colonia<input size="60" type="text" name="colonia"
+      <p><label><span class="letra">Colonia</span>
+        <input size="60" type="text" name="colonia"
       /></label></p>
 
-      <p><label>Municipio<input size="20" type="text"
-      name="municipio" /></label><label>Estado<input size="30" type="text"
+      <p><label><span class="letra">Municipio</span>
+        <input size="20" type="text"
+      name="municipio" /></label><label class="letra">Estado<input size="30" type="text"
       name="Estado" /></label></p>
 
-      <p><label>CP<input size="5" type="text" /></label></p>
+      <p><label><span class="letra">CP</span>
+        <input size="5" type="text" /></label></p>
     </fieldset>
 
     <p><br />
