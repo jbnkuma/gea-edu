@@ -6,33 +6,59 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   
   <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
+<style type="text/css">
+<!--
+.letra {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	color: #00F;
+}
+titulo {
+	font-family: Verdana, Geneva, sans-serif;
+}
+negrita {
+	font-weight: bold;
+}
+#cuestionario form fieldset legend {
+	color: #03F;
+}
+#cuestionario form {
+	font-weight: bold;
+}
+-->
+</style>
 </head>
 
 <body>
 
 <div id="cuestionario">
 
-<form action="Grupos">
+<form action="Sesion">
 
   <fieldset>
     
 	<fieldset>
 	
-        <legend>Grupo</legend>
-<div class="requerido">    <label for="clave">Clave del Grupo </label> <input size="10" type="text" name="clave" /> </div>
-	<div class="requerido">
-    <label for="nombre">Nombre </label> <input size="30" type="text" name="nombre" /> </div>
-    <div class="requerido">
-    <label for="cupo">Cupo</label> <input size="30" type="text" name="cupo" /> </div>
-    <div id="requerido">
-	<label for="clave_materia">Clave de la Materia</label> <input size="30" type="text" name="clave_materia" /> </div>
-     </div>
-    <center>
-    <input type="submit" value="Guardar" />
-    	</center>
-  </fieldset>
+        <legend>Iniciar Sesion</legend>
+      <div class="requerido"></div>
+	<div class="requerido"><span class="letra">Usuario</span>
+	  <input size="20" type="text" name="usuario" /> </div>
+
+    <div class="requerido"><span class="letra">Contraseña</span>
+      <input size="20" type="password" name="a_contraseña" /> </div>
+
+    <div class="requerido"></div>
+</fieldset>
+
+    <fieldset>
+      <legend></legend>
+      <center>
+      <input type="submit" value="Aceptar" />
+      </center>
+    </fieldset>
   
 </form>
 </div>
 </body>
 </html>
+
