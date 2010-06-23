@@ -1,0 +1,30 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Georgia,"Times New Roman",Times,serif;
+  font-size: 100%;
+  background-image: url(./cui/imagenes/de_resguardo.jpg);
+}
+
+#contenedor {
+  margin: 10px auto;
+  width: 800px;
+  height: 900px;
+  /*background-color: #ffffff;*/
+  background-image: url(./cui/imagenes/de_resguardo.jpg);
+}
+
+#cabecera {
+  width: 38em;
+  margin-left:5em;
+  /*background-color: #ffffff;*/
+  background-image: url(./cui/imagenes/de_resguardo.jpg);
+}
+
+#login{
+    margin:10px auto;
+    margin-top: 9em;
+    height: 10em;
+    width: 30em;
+	background-color: #ffffff;
+}
