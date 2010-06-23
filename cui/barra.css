@@ -3,6 +3,7 @@ body {
   padding: 0px;
   font-family: Georgia,"Times New Roman",Times,serif;
   font-size: 100%;
+  background-image: url(imagenes/de_resguardo.jpg);
 }
 #menu ul {
   margin: 0px;
@@ -42,11 +43,13 @@ body {
   margin: 10px auto;
   width: 800px;
   height: 900px;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
+  background-image: url(imagenes/de_resguardo.jpg);
 }
 #cabecera {
   width: 50em;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
+  background-image: url(imagenes/de_resguardo.jpg);
 }
 #menu1 {
   padding: 15px;
@@ -55,9 +58,10 @@ body {
 }
 #contenido {
   padding: 15px;
-  width: 500px;
-  height: 500px;
+  width: 580px;
+  height: 660px;
   float: left;
+  background-color: #ffffff;
 }
 #capa2 {
   width: 25em;
