@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="cui/conexion.jsp" %>     
+<%@ include file="cui/conexion.jsp"%>
+<%@page import="java.util.regex.*"%>     
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -35,7 +36,6 @@ try{
 	sentenciaSQL = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
 		ResultSet.CONCUR_UPDATABLE);
 		String ncuenta=request.getParameter("cuenta");
-		out.println("<p>"+ncuenta+"</p>");
         cdr=sentenciaSQL.executeQuery("SELECT clave FROM exemplo");
         while(cdr.next()){
         	if(cdr.getString("clave").equals(ncuenta)==true){

@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>conexion</title>
+<title>Gea-horarios</title>
 </head>
 <body>
 <% 
@@ -14,18 +14,16 @@ Connection conexion;
 Statement   sentenciaSQL;
 ResultSet   cdr; 
 	try{
-		String URL_bd="jdbc:mysql://localhost/Geaedu";
-		String Usuario="gea";
-		String Contraseña="gea.edu";
+		String URL_bd="jdbc:mysql://localhost/test";
+		String Usuario="root";
+		String Contraseña="king.86";
 
 		conexion = DriverManager.getConnection(URL_bd,Usuario,Contraseña);
-		sentenciaSQL = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
-												ResultSet.CONCUR_UPDATABLE);
 		session.setAttribute("conexion",conexion);
 	}
 	
 	catch(Exception e){
-		
+		out.println("error: "+e+"<br/>");
 	}
 
 
