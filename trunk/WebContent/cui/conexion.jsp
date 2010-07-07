@@ -14,9 +14,9 @@ Connection conexion;
 Statement   sentenciaSQL;
 ResultSet   cdr; 
 	try{
-		String URL_bd="jdbc:mysql://localhost/test";
-		String Usuario="root";
-		String Contraseña="king.86";
+		String URL_bd="jdbc:mysql://localhost/Geaedu";
+		String Usuario="gea";
+		String Contraseña="gea.edu";
 
 		conexion = DriverManager.getConnection(URL_bd,Usuario,Contraseña);
 		session.setAttribute("conexion",conexion);

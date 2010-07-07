@@ -52,7 +52,7 @@ try{
 %>
 <div id="pie">
 <center> gpdsol-gpdsol.blogspot.com </center>
-<center><font size="2" color="black">CC2010 Copyleft GPDSOL: Gea-Edu by Becerril Jesus "Oso" & Romero Yoal "Galleto".</font></center>
+<center><font size="2" color="black">CC2010 Copyleft GPDSOL: Gea-Edu by Becerril Jesus "Oso" and Romero Yoal "Galleto".</font></center>
 </div>
 </body>
 </html>

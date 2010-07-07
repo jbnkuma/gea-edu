@@ -35,9 +35,9 @@ try{
 	sentenciaSQL = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
 		ResultSet.CONCUR_UPDATABLE);
 		String ncuenta=request.getParameter("cuenta");
-        cdr=sentenciaSQL.executeQuery("SELECT clave FROM exemplo");
+        cdr=sentenciaSQL.executeQuery("SELECT ncuenta FROM Tabla_Alumno");
         while(cdr.next()){
-        	if(cdr.getString("clave").equals(ncuenta)==true){
+        	if(cdr.getString("ncuenta").equals(ncuenta)==true){
         		response.sendRedirect("./cui/index.html");
         	}
         	else{
@@ -52,7 +52,7 @@ try{
 %>
 <div id="pie">
 <center> gpdsol-gpdsol.blogspot.com </center>
-<center><font size="2" color="black">CC2010 Copyleft GPDSOL: Gea-Edu by Becerril Jesus "Oso" & Romero Yoal "Galleto".</font></center>
+<center><font size="2" color="black">CC2010 Copyleft GPDSOL: Gea-Edu by Becerril Jesus "Oso" and Romero Yoal "Galleto".</font></center>
 </div>
 </body>
 </html>
