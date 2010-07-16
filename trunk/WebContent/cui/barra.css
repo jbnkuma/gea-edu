@@ -7,6 +7,7 @@ body {
   background-image: url(imagenes/fondo.jpg);
   background-color: black;
 }
+/*
 #menu ul {
   margin: 0px;
   padding: 0px;
@@ -40,7 +41,7 @@ body {
   background-position: 0 -30px;
   background-color: #cccccc;
   height: 20px;
-}
+}*/
 #contenedor {
   margin: 10px auto;
   width: 800px;
@@ -55,7 +56,7 @@ body {
   /* No passa nada en esta ruta de imagen */
 }
 #menu1 {
-  padding: 15px;
+  padding: 0px;
   float: left;
   width: 160px;
 }
@@ -78,7 +79,8 @@ ul {
   list-style-image: none;
   list-style-position: outside;
 }
-a {
+
+/*a {
   margin: 1em 0;
   float: left;
   clear: left;
@@ -94,7 +96,8 @@ a.boton:hover {
 }
 a.boton:active {
   border: 1px inset #000000;
-}
+}*/
+
 img {
   margin: auto;
   display: block;
