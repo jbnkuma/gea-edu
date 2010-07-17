@@ -8,19 +8,43 @@
   
   <link rel="stylesheet" type="text/css" href="barra.css" media="screen" />   
   <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
+  <script src="scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <meta name="generator" content="Bluefish 2.0.0" />
 
 </head><body>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+	$('#menu1 li a').click(function(event){
+		var elem = $(this).next();
+		if(elem.is('ul')){
+			event.preventDefault();
+			$('#menu1 ul:visible').not(elem).slideUp();
+			elem.slideToggle();
+		}
+	});
+});
+</script>
+
 <div id="contenedor">
 <div id="cabecera"> <img src="./imagenes/geacui.png" alt="logo CUI" name="baner1" height="90" width="800" />
 <center> <img src="./imagenes/tux_work.png" alt="tux linux" name="tuxtrabajo" height="90" width="100" /> </center>
 </div>
-<div id="menu1">
-<ul class="menu">
-  <li><a  href="./formularios/formulario1.html" target="mi_marco">Inscribir Alumno</a></li>
-  <li><a  href="./formularios/formulario2.html" target="mi_marco">Dar de Alta Materia</a></li>
+<div id="menu">
+<ul id="menu1">
+  <li><a  href="">Inscribir Alumno</a>
+       <ul>
+         <li><a  href="./formularios/formulario1.html" target="mi_marco" >Uno a uno</a></li>
+         <li><a  href="#" >Subir lista</a></li>
+       </ul>
+       </li>
+  <li><a  href="">Dar de Alta Materia</a>
+	  <ul>
+         <li><a  href="./formularios/formulario2.html" target="mi_marco" >Una a una</a></li>
+         <li><a  href="#" >Subir lista</a></li>
+       </ul>
+       </li>
   <li><a  href="./formularios/formulario4.html" target="mi_marco">Dar de alta Horarios</a></li>
-  <li><a  href=" " target="mi_marco">Sesion de Alumno</a></li>
+  <li><a  href="" target="mi_marco">Sesion de Alumno</a></li>
   <li><a  href="./formularios/formulario3.html" target="mi_marco">Dar de alta grupos</a></li>
   <li><a  href="../index.jsp">Salir</a></li>
 </ul>
