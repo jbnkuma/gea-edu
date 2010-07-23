@@ -3,6 +3,8 @@
       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  
+
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   
   <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
@@ -38,24 +40,65 @@
 
 <div id="cuestionario">
 
-<form action="../form1.jsp" method="post">
+<form  action="../form1.jsp" method="post">
 
   <fieldset>
     <legend class="letra">Formulario de Inscripción</legend>
 	<fieldset>
 	
         <legend class="letra">Datos Personales del Alumno</legend>
-   <div class="requerido"><label for="n_cuenta"class="letra">Numero de cuenta </label> <input size="10" type="text" name="n_cuenta" /> </div>
-	<div class="requerido">
-    <label for="nombre" class="letra">Nombre </label> <input size="30" type="text" name="nombre" /> </div>
+<table cellspacing="2" cellpadding="2" border="0">
+<tr>
+   <div class="requerido">
+   <td>
+   <label for="n_cuenta"class="letra">Numero de cuenta </label>
+   </td>
+   <td>
+   <input size="10" type="text" name="n_cuenta" /> 
+   </td>
+   </div>
+</tr>
 
-    <div class="requerido">
-    <label for="A_paterno" class="letra">Apellido Paterno </label> <input size="30" type="text" name="A_paterno" /> </div>
+<tr>
+   <div class="requerido">
+   <td>
+   <label for="nombre" class="letra">Nombre </label>
+   </td>
+   <td> 
+   <input size="30" type="text" name="nombre" /> 
+   </td>
+   </div>
+</tr>
 
+<tr>
     <div class="requerido">
-    <label for="A_materno" class="letra">Apellido Materno </label> <input size="30" type="text" name="A_materno" /> </div>
+    <td>
+    <label for="A_paterno" class="letra">Apellido Paterno </label> 
+    </td>
+    <td>
+    <input size="30" type="text" name="A_paterno" /> 
+    </td>
+    </div>
+</tr>
+
+
+<tr>
+    <div class="requerido">
+    <td>
+    <label for="A_materno" class="letra">Apellido Materno </label> 
+    </td>
+    <td>
+    <input size="30" type="text" name="A_materno" /> 
+    </td>
+    </div>
+</tr>
+
+<tr>
     <div id="requerido">
+    <td>
     <label for="Edad" class="letra">Edad </label> 
+    </td>
+    <td>
     <select name="edad" class="letra" id="edad">
       <option id="ed"  selected="selected">15</option>
       <option value="16">16</option>
@@ -104,56 +147,95 @@
       <option value="59">59</option>
       <option value="60">60</option>
     </select>
-     </div>
+    </td>
+    </div>
+</tr>
 
-    <div class="requerido">
-    <label for="telefono" class="letra">Telefono</label> <input size="12" type="text"
-    name="telefono" /> </div>
 
+<tr>
     <div class="requerido">
-    <label for="correo_1" class="letra">E-mail</label> <input name="correo_1" type="text"
-    size="12" /> <label class="letra">@ </label> 
+    <td>
+    <label for="telefono" class="letra">Telefono</label> 
+    </td>
+    <td>
+    <input size="12" type="text" name="telefono" />
+    </td>
+    </div>
+</tr>
+
+<tr>
+    <div class="requerido">
+    <td>
+    <label for="correo_1" class="letra">E-mail</label> 
+    </td>
+    <td>
+    <input name="correo_1" type="text" size="12" /> 
+    <label class="letra">@ </label> 
     <select name="correo_2" class="letra" id="cor">
       <option value="gmail.com" selected="selected">gmail.com</option>
       <option value="hotmail.com">hotmail.com</option>
       <option value="yahoo.com">yahoo.com</option>
       <option value="live.com">live.com</option>
       <option value="msn.com">msn.com</option>
-    </select>
-     </div>
+     </select>
+    </td>
+    </div>
+</tr>
+
+<tr>
     <div class="requerido">
+    <td>
     <label for="Sexo"><span class="letra">Sexo</span></label> 
+    </td>
+    <td>
     <span class="letra">
     <label for="femenino">F</label>
     </span>
-    <label for="femenino"></label><input name="femenino" type="checkbox"
-    value="femenino" /> <label for="masculino" class="letra">M</label><input name="masculino"
-    type="checkbox" value="masculino"/>
+    <label for="femenino"></label>
+    <input name="femenino" type="checkbox" value="femenino" /> 
+    <label for="masculino" class="letra">M</label>
+    <input name="masculino" type="checkbox" value="masculino"/>
+    </td>
     </div>
+</tr>
+</table>
     </fieldset>
 
-    <fieldset>
+
+<fieldset>
+
       <legend class="letra">Dirección</legend>
+
       <p><label><span class="letra">Calle</span>
+
       <input size="60" type="text" name="calle"
+
       /></label></p>
+
+
 
       <p><label><span class="letra">Colonia</span>
-        <input size="60" type="text" name="colonia"
-      /></label></p>
-      <p><label><span class="letra">Municipio</span><input size="20" type="text" name="municipio" /></label></p>
-     <p><label class="letra">Estado<input size="30" type="text" name="Estado" /></label></p>
-      <p><label><span class="letra">CP</span>
-        <input size="5" type="text" name="cp"/></label></p>
-    </fieldset>
 
-    <p><br />
-    </p>
+        <input size="60" type="text" name="colonia"
+
+      /></label></p>
+
+      <p><label><span class="letra">Municipio</span><input size="20" type="text" name="municipio" /></label></p>
+
+     <p><label class="letra">Estado&nbsp;&nbsp;&nbsp;<input size="30" type="text" name="Estado" /></label></p>
+
+      <p><label><span class="letra">CP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+        <input size="5" type="text" name="cp"/></label></p>
+
+    </fieldset>
     <center>
     <input type="submit" value="Guardar" />
     </center>
+
   </fieldset>
 </form>
+
 </div>
 </body>
 </html>
