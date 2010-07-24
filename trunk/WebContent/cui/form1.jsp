@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="conexion.jsp"%>
-<%@page import="java.util.regex.*"%>      
+<%@page import="core.connector" %>         
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,9 +11,6 @@
 <body>
 <%
 try{
-	conexion=(Connection)session.getAttribute("conexion");
-	sentenciaSQL = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
-		ResultSet.CONCUR_UPDATABLE);
 		String ncuenta=request.getParameter("n_cuenta");
 		String nombre=request.getParameter("nombre");
 		String apaterno=request.getParameter("A_paterno");
@@ -34,25 +30,9 @@ try{
 		String codigop=request.getParameter("cp");
 		String Genero="otro";
 		
-		/*if(genero1.equals("femenino")==true){
-		  Genero="femenino";
-		}
-		else{
-			if(genero2.equals("masculino")==true){
-				Genero="masculino";		
-			}
-			else{
-				Genero="otro";
-			}
-		}*/
-		
-		
-        sentenciaSQL.executeUpdate("INSERT INTO Tabla_Alumno VALUES('"+ncuenta+"', '"+nombre+"','"+apaterno+"','"+amaterno+"','"+edad+"','"+telefono+"','"+correo+"','"+Genero+"','"+calle+"','"+colonia+"','"+municipio+"','"+estado+"','"+codigop+"');");
-        out.println("Se a registrado al alumno");
-        conexion.close();
+		connector.formu1(ncuenta, nombre , apaterno ,  amaterno ,  edad , telefono , correo ,  Genero ,  calle,  colonia , municipio , estado , codigop );
     }catch(Exception e){
 			 out.println("error: "+e+"<br/>");
-			 
 		
 		}
     
