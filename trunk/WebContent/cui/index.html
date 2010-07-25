@@ -1,77 +1,56 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-  
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  
-  
-  <link rel="stylesheet" type="text/css" href="barra.css" media="screen" />   
-  <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
-  <script src="scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-  <meta name="generator" content="Bluefish 2.0.0" />
-  <script languaje="JavaScript">
-  <!-- Begin
-   var scrl = " GEA-CUI ";
-   function scrlsts() {
-   scrl = scrl.substring(1, scrl.length) + scrl.substring(0, 1);
-   document.title = scrl;
-   setTimeout("scrlsts()", 300);
-   }
-//  End -->
-</script>
-
-
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="barra.css" media="screen" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="stylesheet.css" />
+<script src="scripts/jquery.min.js" type="text/javascript"
+	charset="utf-8"></script>
+<script src="scripts/menu.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
-
-<body onLoad="scrlsts()">
-<script type="text/javascript" charset="utf-8">
-$(function(){
-	$('#menu1 li a').click(function(event){
-		var elem = $(this).next();
-		if(elem.is('ul')){
-			event.preventDefault();
-			$('#menu1 ul:visible').not(elem).slideUp();
-			elem.slideToggle();
-		}
-	});
-});
-</script>
-
+<body onload="scrlsts()">
 <div id="contenedor">
-<div id="cabecera"> <img src="./imagenes/geacui.png" alt="logo CUI" name="baner1" height="90" width="800" />
-<center> <img src="./imagenes/tux_work.png" alt="tux linux" name="tuxtrabajo" height="90" width="100" /> </center>
+<div id="cabecera"><img src="./imagenes/geacui.png" alt="logo CUI"
+	name="baner1" height="90" width="800" />
+<center><img src="./imagenes/tux_work.png" alt="tux linux"
+	name="tuxtrabajo" height="90" width="100" /></center>
 </div>
 <div id="menu">
 <ul id="menu1">
-  <li><a  href="">Inscribir Alumno</a>
-       <ul>
-         <li><a  href="./formularios/formulario1.html" target="mi_marco" >Uno a uno</a></li>
-         <li><a  href="#" >Subir lista</a></li>
-       </ul>
-       </li>
-  <li><a  href="">Dar de Alta Materia</a>
-	  <ul>
-         <li><a  href="./formularios/formulario2.html" target="mi_marco" >Una a una</a></li>
-         <li><a  href="#" >Subir lista</a></li>
-       </ul>
-       </li>
-  <li><a  href="./formularios/formulario4.html" target="mi_marco">Dar de alta Horarios</a></li>
-  <li><a  href="" target="mi_marco">Sesion de Alumno</a></li>
-  <li><a  href="./formularios/formulario3.html" target="mi_marco">Dar de alta grupos</a></li>
-  <li><a  href="../index.jsp">Salir</a></li>
+	<li><a href="">Inscribir Alumno</a>
+	<ul>
+		<li><a href="./formularios/formulario1.html" target="mi_marco">Uno
+		a uno</a></li>
+		<li><a href="#">Subir lista</a></li>
+	</ul>
+	</li>
+	<li><a href="">Dar de Alta Materia</a>
+	<ul>
+		<li><a href="./formularios/formulario2.html" target="mi_marco">Una
+		a una</a></li>
+		<li><a href="#">Subir lista</a></li>
+	</ul>
+	</li>
+	<li><a href="./formularios/formulario4.html" target="mi_marco">Dar
+	de alta Horarios</a></li>
+	<li><a href="" target="mi_marco">Sesion de Alumno</a></li>
+	<li><a href="./formularios/formulario3.html" target="mi_marco">Dar
+	de alta grupos</a></li>
+	<li><a href="../index.jsp">Salir</a></li>
 </ul>
 </div>
-<div id="contenido">
-    <iframe style="border: 0px none ;" name="mi_marco" src="" height="675" scrolling="no" width="570" >Es
-probable
-que tu navegador no soporte iframes trata con algun otro navegador o
-actualiza tu navegador</iframe>
-</div>
+<div id="contenido"><iframe style="border: 0px none;"
+	name="mi_marco" src="" height="675" scrolling="no" width="570">Es
+probable que tu navegador no soporte iframes trata con algun otro
+navegador o actualiza tu navegador</iframe></div>
 </div>
 
 <div id="pie">
-<center> gpdsol-gpdsol.blogspot.com </center>
-<center><font size="2" color="black">CC2010 GPDSOL: Gea-Edu by Becerril Jesus "Oso" and Romero Yoal "Galleto".</font></center>
+<center>gpdsol-gpdsol.blogspot.com</center>
+<center><font size="2" color="black">CC2010 GPDSOL:
+Gea-Edu by Becerril Jesus "Oso" and Romero Yoal "Galleto".</font></center>
 </div>
 </body>
 </html>

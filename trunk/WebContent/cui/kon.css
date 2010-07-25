@@ -3,7 +3,7 @@
   width: 800px;
   height: 500px;
  
-  background-image: url(gale.png);
+  background-image: url(imagenes/gale.png);
 }
 body {
   background: #F7F8E0;
@@ -22,5 +22,5 @@ color: white;
 position: static ;
 margin:0 auto;
 margin-top:-1.5em;
-background-image: url(footer.png);
+background-image: url(imagenes/footer.png);
 }
