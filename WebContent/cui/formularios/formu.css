@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+.personales{
+	margin: .4em 0;
+	font: normal 1em 'Helvetica', Arial, sans-serif;
+}
+
+.personales label {
+	float: left;
+	width: 15%;
+}
+.personales input:focus {
+	border: 2px solid #000;
+	background: #F3F3F3F
+}
+
+.edad{
+	margin: .4em 0;
+	font: normal 1em 'Helvetica', Arial, sans-serif;
+}
+
+.edad label {
+	float: left;
+	width: 5%;
+}

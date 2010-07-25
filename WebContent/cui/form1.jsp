@@ -31,6 +31,7 @@ try{
 		String Genero="otro";
 		
 		connector.formu1(ncuenta, nombre , apaterno ,  amaterno ,  edad , telefono , correo ,  Genero ,  calle,  colonia , municipio , estado , codigop );
+		response.sendRedirect("./formularios/formulario1.html");
     }catch(Exception e){
 			 out.println("error: "+e+"<br/>");
 		

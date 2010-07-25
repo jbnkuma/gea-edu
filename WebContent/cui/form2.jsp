@@ -17,6 +17,7 @@ try{
 		String semestre=request.getParameter("semestre");
 
 		connector.formu2(clave, nombre, curso, semestre);
+		response.sendRedirect("./formularios/formulario2.html");
     }catch(Exception e){
 			 out.println("error: "+e+"<br/>");
 			 
