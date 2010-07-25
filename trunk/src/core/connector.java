@@ -37,8 +37,8 @@ public class connector {
 				ResultSet.CONCUR_UPDATABLE);
 	        cdr=sentenciaSQL.executeQuery("SELECT ncuenta FROM Tabla_Alumno where ncuenta='"+cuenta+"';");
 	        while(cdr.next()){
-	        	System.out .print(cdr);
-	        	if(cdr.equals(cuenta)==true){
+	        	String kuenta=cdr.getString("ncuenta"); 
+	        	if(kuenta.equals(cuenta)){
 	            conexion.close();	
 	        	return true;
 	        	}
@@ -68,6 +68,30 @@ public class connector {
 		sentenciaSQL.executeUpdate("INSERT INTO Tabla_Alumno VALUES('"+clave+"', '"+nombre+"','"+curso+"','"+semestre+"');");
 		conexion.close();
 	 }
+	 
+		public static Boolean idadmin(String clave, String usuario) throws SQLException{
+			Connection conexion = connector.getSqlServerConnection("entrada","entrada"); 
+			Statement   sentenciaSQL;
+			ResultSet   cdr;
+			sentenciaSQL = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+					ResultSet.CONCUR_UPDATABLE);
+		        cdr=sentenciaSQL.executeQuery("SELECT ncuenta FROM Tabla_Alumno where ncuenta='"+clave+"';");
+		        while(cdr.next()){
+		        	
+		        	String kuenta=cdr.getString("ncuenta"); 
+		        	if(kuenta.equals(clave)){
+		            conexion.close();	
+		        	return true;
+		        	}
+		        	else{
+		        		conexion.close();
+		        		return false;
+		        	}
+		        }
+		   
+		        conexion.close();
+			    return false;
+		} 
 
 	 
 }
