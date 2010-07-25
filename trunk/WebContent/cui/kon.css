@@ -1,0 +1,26 @@
+#contenedor {
+  margin: 10px auto;
+  width: 800px;
+  height: 500px;
+ 
+  background-image: url(gale.png);
+}
+body {
+  background: #F7F8E0;
+  margin: -1em;
+  padding: 3px;
+  font-family: Georgia,"Times New Roman",Times,serif;
+  font-size: 100%;
+}
+
+#pie{
+clear: both;
+padding: 25px;
+width: 715px;
+height: 1.5em;
+color: white;
+position: static ;
+margin:0 auto;
+margin-top:-1.5em;
+background-image: url(footer.png);
+}
