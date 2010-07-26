@@ -4,35 +4,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  
   <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
-<style type="text/css">
-<!--
-.letra {
-	font-family: Verdana, Geneva, sans-serif;
-	font-weight: bold;
-	color: #00F;
-}
-titulo {
-	font-family: Verdana, Geneva, sans-serif;
-}
-negrita {
-	font-weight: bold;
-}
-#cuestionario form fieldset legend {
-	color: #03F;
-}
-#cuestionario form {
-	font-weight: bold;
-}
--->
-</style>
+  <link rel="stylesheet" href="formu.css" type="text/css" media="screen" />
 </head>
 
 <body>
 
 <div id="cuestionario">
+<form action="../form3.jsp" method="post">
 
+<fieldset><legend>Teclea el nombre de usuario y password</legend>
+
+
+<div class="personales"><label for="nombre">Nombre  de usuario</label> <input
+	size="30" type="text" name="nombre" /></div>
+
+<div class="personales"><label for="clave">Clave</label> <input
+	size="30" type="text" name="clave" /></div>
+	
+<center><input type="submit" value="Guardar" /></center>
+</fieldset>
+</form>
 </div>
 </body>
 </html>
