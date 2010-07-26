@@ -7,6 +7,7 @@ body{
 	width: 96%;
 	heigth: 100%;
 	}
+	
 .personales{
 	margin: .5em 0;
 	font: normal .8em 'Helvetica', Arial, sans-serif;
@@ -16,10 +17,11 @@ body{
 	float: left;
 	width: 25%;
 }
+
 .personales input:focus {
 	border: 2px solid #000;
 	background: #F3F3F3F
-}
+
 
 .edad{
 	margin: .4em 0;
@@ -30,4 +32,4 @@ body{
 	float: left;
 	width: 5%;
 }
-
+form{clear:both;}

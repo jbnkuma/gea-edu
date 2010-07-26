@@ -7,9 +7,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="login.css" media="screen" />
+<script src="cui/scripts/menu.js" type="text/javascript" charset="utf-8"></script>
 <title>Bienvenido </title>
 </head>
-<body>
+<body onload="scrlsts()">
 <div id="contenedor">
 <div id="cabecera">
   <img src="./cui/imagenes/geacui_ligin.png" alt="logo CUI" name="baner1" height="100" width="800" />
@@ -36,7 +37,7 @@
         	if(connector.id(ncuenta)){
         		HttpSession sok=request.getSession();
         		sok.setAttribute("cuenta",ncuenta);
-        		response.sendRedirect("./cui/index.html");
+        		response.sendRedirect("./cui/Konstruccion.html");
         	}
         	
         
