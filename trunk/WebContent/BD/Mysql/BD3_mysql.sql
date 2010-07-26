@@ -2,9 +2,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
 CREATE SCHEMA IF NOT EXISTS `Geaedu` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
-USE `mydb` ;
 USE `Geaedu` ;
 
 -- -----------------------------------------------------
@@ -38,8 +36,8 @@ CREATE  TABLE IF NOT EXISTS `Geaedu`.`Tabla_Materia` (
   `nombre` VARCHAR(45) NULL DEFAULT NULL ,
   `semestre` VARCHAR(45) NULL DEFAULT NULL ,
   `curso` VARCHAR(45) NULL DEFAULT NULL ,
-  `grupo` VARCHAR(45) NULL ,
-  `docente` VARCHAR(45) NULL ,
+  `grupo` VARCHAR(45) NULL DEFAULT NULL ,
+  `docente` VARCHAR(45) NULL DEFAULT NULL ,
   PRIMARY KEY (`id_materia`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
@@ -54,7 +52,7 @@ CREATE  TABLE IF NOT EXISTS `Geaedu`.`Tabla_Grupo` (
   `nombre` VARCHAR(45) NULL DEFAULT NULL ,
   `cupo` INT NULL DEFAULT NULL ,
   `Tabla_Materia_id_materia` VARCHAR(15) NOT NULL ,
-  `semestre` INT NULL ,
+  `semestre` INT NULL DEFAULT NULL ,
   PRIMARY KEY (`id_grupo`, `Tabla_Materia_id_materia`) ,
   INDEX `fk_Tabla_Grupo_Tabla_Materia1` (`Tabla_Materia_id_materia` ASC) ,
   CONSTRAINT `fk_Tabla_Grupo_Tabla_Materia1`
@@ -72,12 +70,10 @@ COLLATE = utf8_bin;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `Geaedu`.`Tabla_Horario` (
   `idhorario` INT NOT NULL ,
+  `Dia` VARCHAR(45) NOT NULL ,
+  `Hora_inicio` TIME NOT NULL ,
+  `Hora_fin` TIME NOT NULL ,
   `idmateria` INT NOT NULL ,
-  `lunes` TIME NULL DEFAULT NULL ,
-  `martes` TIME NULL DEFAULT NULL ,
-  `miercoles` TIME NULL DEFAULT NULL ,
-  `jueves` TIME NULL DEFAULT NULL ,
-  `viernes` VARCHAR(45) NULL DEFAULT NULL ,
   `Tabla_Grupo_id_grupo` INT NOT NULL ,
   `Tabla_Materia_id_materia` VARCHAR(15) NOT NULL ,
   PRIMARY KEY (`Tabla_Grupo_id_grupo`, `idhorario`, `idmateria`, `Tabla_Materia_id_materia`) ,
@@ -128,12 +124,9 @@ COLLATE = utf8_bin;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `Geaedu`.`Horarios_chavales` (
   `idalumno` INT NOT NULL ,
-  `idmateria` VARCHAR(45) NULL ,
-  `lunes` DATE NULL ,
-  `martes` DATE NULL ,
-  `miercoles` DATE NULL ,
-  `jueves` DATE NULL ,
-  `viernes` DATE NULL ,
+  `Dia` VARCHAR(45) NOT NULL ,
+  `Hora_inicio` TIME NOT NULL ,
+  `Hora_fin` TIME NOT NULL ,
   `Tabla_Alumno_ncuenta` VARCHAR(12) NOT NULL ,
   `Tabla_Materia_id_materia` VARCHAR(15) NOT NULL ,
   PRIMARY KEY (`idalumno`, `Tabla_Alumno_ncuenta`, `Tabla_Materia_id_materia`) ,
