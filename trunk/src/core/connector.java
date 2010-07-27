@@ -86,45 +86,43 @@ public class connector {
 		conexion.close();
 	}
 
-	public static Boolean idadmin(String clave, String usuario)
-			throws SQLException {
+	public static Boolean idadmin(String clave, String usuario){
+		String kuenta=new String();
+		String pass=new String();
+		try{
 		Connection conexion = connector.getSqlServerConnection("entrada",
 				"entrada");
 		Statement sentenciaSQL;
 		ResultSet cdr;
-		sentenciaSQL = conexion.createStatement(
-				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+		sentenciaSQL = conexion.createStatement();
 		cdr = sentenciaSQL
 				.executeQuery("SELECT nombre,password FROM Tabla_admin where password='"
 						+ clave + "';");
 		while (cdr.next()) {
-			String pass = cdr.getString("nombre");
-			String kuenta = cdr.getString("password");
-			if (pass.equals(usuario)) {
-				if (kuenta.equals(clave)) {
-					conexion.close();
-					return true;
-				} else {
-					conexion.close();
-					return false;
-				}
-			} else {
-				conexion.close();
-				return false;
-			}
-		}
+			 kuenta = cdr.getString("nombre");
+			 pass = cdr.getString("password");
 
+		}
+		if (kuenta.equals(usuario) && pass.equals(clave)) {
+			conexion.close();
+			return true;
+		}
+		else{
 		conexion.close();
 		return false;
+		}
+		}
+		catch(Exception e){
+			
+		}
+		return null;
 	}
 
-	public static void nuevoadmin(String clave, String nombre)
-			throws SQLException {
+	public static void formu3(String clave, String nombre) throws SQLException {
 		Connection conexion = connector.getSqlServerConnection("entrada",
 				"entrada");
 		Statement sentenciaSQL;
-		sentenciaSQL = conexion.createStatement(
-				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+		sentenciaSQL = conexion.createStatement();
 		sentenciaSQL
 				.executeUpdate("INSERT INTO Tabla_admin (nombre,password) VALUES('"
 						+ nombre + "', '" + clave + "');");

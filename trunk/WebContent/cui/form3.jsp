@@ -13,8 +13,7 @@
 try{
 		String clave=request.getParameter("clave");
 		String nombre=request.getParameter("nombre");
-
-		connector.nuevoadmin(clave, nombre);
+		connector.formu3(clave,nombre);
 		response.sendRedirect("./formularios/formulario3.html");
     }catch(Exception e){
 			 out.println("error: "+e+"<br/>");

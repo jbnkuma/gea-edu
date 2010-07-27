@@ -34,17 +34,13 @@
 </form>
 </div>
 <%
-
+	
 		String ncuenta=request.getParameter("cuenta");
 		String user=request.getParameter("usuario");
-        
         	if(connector.idadmin(ncuenta, user)){
-        		HttpSession sok=request.getSession();
-        		sok.setAttribute("usuario",user);
         		response.sendRedirect("./cui/index.html");
         	}
-        	
-        
+     
 %>
 <div id="pie">
 <center>gpdsol-gpdsol.blogspot.com</center>
