@@ -35,8 +35,6 @@
 		String ncuenta=request.getParameter("cuenta");
         
         	if(connector.id(ncuenta)){
-        		HttpSession sok=request.getSession();
-        		sok.setAttribute("cuenta",ncuenta);
         		response.sendRedirect("./cui/Konstruccion.html");
         	}
         	
