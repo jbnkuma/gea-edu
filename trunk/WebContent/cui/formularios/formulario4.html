@@ -6,7 +6,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="formu.css" media="screen" />
 <script src="mootools.v1.11.js" type="text/javascript"
-	charset="utf-8"></script>
+	charset="utf-8"></script>	
 <script src="nogray_time_picker_min.js" type="text/javascript"
 	charset="utf-8"></script>	
 <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
@@ -44,7 +44,7 @@ window.addEvent("domready", function (){
 <body>
 <div id="cuestionario">
 
-<form action="Horarios">
+<form action="../form6.jsp" method="post">
 <fieldset><legend>Horario</legend>
 
 
@@ -64,6 +64,11 @@ window.addEvent("domready", function (){
 <div class="personales"><label for="fin">Hora de Termino</label> <input
 	size="5" type="text" name="time3" id="time3" readonly="readonly" />
 <div id="time3_picker" class="time_picker_div"></div></div>
+
+<div class="personales"><label for="grupo">Clave Grupo</label> <input
+	size="20" type="text" name="clvgrupo" /></div>
+<div class="personales"><label for="materia">Clave Materia</label> <input
+	size="20" type="text" name="clvmateria" /></div>
 
 
 <center><input type="submit" value="Guardar" /></center>

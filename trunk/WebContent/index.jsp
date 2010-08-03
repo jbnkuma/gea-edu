@@ -34,12 +34,15 @@
 
 		String ncuenta=request.getParameter("cuenta");
         
-        	if(connector.id(ncuenta)){
-        		response.sendRedirect("./cui/Konstruccion.html");
-        	}
+        	if(connector.id(ncuenta)){  %>
+        	<% 	}%>
+        		<jsp:forward page=”./cui/Konstruccion.html"”/>
+
+        
         	
         
-%>
+
+
 <div id="pie">
 <center> gpdsol-gpdsol.blogspot.com </center>
 <center><font size="2" color="black">CC2010 Copyleft GPDSOL: Gea-Edu by Becerril Jesus "Oso" and Romero Yoal "Galleto".</font></center>

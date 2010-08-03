@@ -18,7 +18,7 @@
 <center><img src="./cui/imagenes/tux_work.png" alt="tux linux"
 	name="tuxtrabajo" height="90" width="100" /></center>
 </div>
-<form action="index.jsp" method="post">
+<form action="login.jsp" method="post">
 <div id="login">
 <center>
 <h1>Ingresa Tu Cuenta</h1>
@@ -34,13 +34,19 @@
 </form>
 </div>
 <%
-	
-		String ncuenta=request.getParameter("cuenta");
-		String user=request.getParameter("usuario");
-        	if(connector.idadmin(ncuenta, user)){
-        		response.sendRedirect("./cui/index.html");
-        	}
-     
+	try {
+		String cuenta = request.getParameter("cuenta");
+		String user = request.getParameter("usuario");
+		int resultado = connector.idadmin(cuenta, user);
+
+		if (resultado == 1) {
+			response.sendRedirect("./cui/index.html");
+		} else {
+			out.println("Informacion de Usuario Erronea");
+		}
+	} catch (Exception e) {
+
+	}
 %>
 <div id="pie">
 <center>gpdsol-gpdsol.blogspot.com</center>
