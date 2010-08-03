@@ -21,7 +21,7 @@ body{
 .personales input:focus {
 	border: 2px solid #000;
 	background: #F3F3F3F
-
+}
 
 .edad{
 	margin: .4em 0;
@@ -32,4 +32,44 @@ body{
 	float: left;
 	width: 5%;
 }
+
 form{clear:both;}
+
+.datos{
+	width: 43em;
+	border: 2px solid #000;
+	border-collapse: collapse;
+	font: normal .8em 'Helvetica', Arial, sans-serif;
+    align:center;
+}
+
+.datos th{
+	border: 1px solid #000;
+}
+
+.datos td{
+	text-align:center;
+		
+}	
+.adress{
+	width: 43em;
+	border: 2px solid #000;
+	border-collapse: collapse;
+	font: normal .8em 'Helvetica', Arial, sans-serif;
+    align:center;
+}
+
+.adress th{
+	border: 1px solid #000;
+}
+.adress td{
+	text-align:center;	
+}	
+
+#dalumnos{
+margin: 1em 0;
+}
+
+#alumnosa{
+margin: 1em 0;
+}

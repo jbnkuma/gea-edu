@@ -86,36 +86,35 @@ public class connector {
 		conexion.close();
 	}
 
-	public static Boolean idadmin(String clave, String usuario){
-		String kuenta=new String();
-		String pass=new String();
-		try{
-		Connection conexion = connector.getSqlServerConnection("entrada",
-				"entrada");
-		Statement sentenciaSQL;
-		ResultSet cdr;
-		sentenciaSQL = conexion.createStatement();
-		cdr = sentenciaSQL
-				.executeQuery("SELECT nombre,password FROM Tabla_admin where password='"
-						+ clave + "';");
-		while (cdr.next()) {
-			 kuenta = cdr.getString("nombre");
-			 pass = cdr.getString("password");
+	public static int idadmin(String clave, String usuario) {
 
+		try {
+			String kuenta = new String();
+			String pass = new String();
+			Connection conexion = connector.getSqlServerConnection("entrada",
+					"entrada");
+			Statement sentenciaSQL;
+			ResultSet cdr;
+			sentenciaSQL = conexion.createStatement();
+			cdr = sentenciaSQL
+					.executeQuery("SELECT nombre,password FROM Tabla_admin where password='"
+							+ clave + "';");
+			while (cdr.next()) {
+				kuenta = cdr.getString("nombre");
+				pass = cdr.getString("password");
+
+			}
+			if (kuenta.equals(usuario) && pass.equals(clave)) {
+				conexion.close();
+				return 1;
+			} else {
+				conexion.close();
+				return 0;
+			}
+		} catch (Exception e) {
+			return 0;
 		}
-		if (kuenta.equals(usuario) && pass.equals(clave)) {
-			conexion.close();
-			return true;
-		}
-		else{
-		conexion.close();
-		return false;
-		}
-		}
-		catch(Exception e){
-			
-		}
-		return null;
+
 	}
 
 	public static void formu3(String clave, String nombre) throws SQLException {
@@ -129,4 +128,47 @@ public class connector {
 		conexion.close();
 	}
 
+	public static void formu4(String clave, String nombre, String curso,
+			String docente, String semestre) throws SQLException {
+		Connection conexion = connector.getSqlServerConnection("entrada",
+				"entrada");
+		Statement sentenciaSQL;
+		sentenciaSQL = conexion.createStatement();
+		sentenciaSQL.executeUpdate("INSERT INTO Tabla_Materia  VALUES('"
+				+ clave + "','" + nombre + "', '" + curso + "','" + docente
+				+ "','" + semestre + "');");
+		conexion.close();
+	}
+
+	public static void formu5(String clave, String nombre, String tmpcupo,
+			String c_materia, String semestre) throws SQLException {
+		int cupo = Integer.parseInt(tmpcupo);
+		Connection conexion = connector.getSqlServerConnection("entrada",
+				"entrada");
+		Statement sentenciaSQL;
+		sentenciaSQL = conexion.createStatement();
+		sentenciaSQL.executeUpdate("INSERT INTO Tabla_Grupo  VALUES('" + clave
+				+ "','" + nombre + "', '" + cupo + "','" + c_materia + "','"
+				+ semestre + "');");
+		conexion.close();
+	}
+
+	public static void formu6(String dia, String hinicio, String hfinal,
+			String tmpgrupo, String cmateria) throws SQLException {
+		Connection conexion = connector.getSqlServerConnection("entrada",
+				"entrada");
+		int cgrupo = Integer.parseInt(tmpgrupo);
+		Statement sentenciaSQL;
+		sentenciaSQL = conexion.createStatement();
+		sentenciaSQL
+				.executeUpdate("INSERT INTO Tabla_Horario (Dia, Hora_inicio, Hora_fin, Tabla_Grupo_id_grupo, Tabla_Materia_id_materia)  VALUES('"
+						+ dia
+						+ "','"
+						+ hinicio
+						+ "', '"
+						+ hfinal
+						+ "','"
+						+ cgrupo + "','" + cmateria + "');");
+		conexion.close();
+	}
 }

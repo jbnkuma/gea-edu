@@ -33,10 +33,10 @@ public class pruebas {
 	 */
 	public static void main(String[] args){
 		// TODO Auto-generated method stub
-		String usuario="ad";
-		String clave="admin";
-		String kuenta=new String();
-		String pass=new String();
+		//String usuario="ad";
+		String clave="09862";
+		//String kuenta=new String();
+		//String pass=new String();
 		try{ 
 			
 		
@@ -46,22 +46,20 @@ public class pruebas {
 		ResultSet cdr;
 		sentenciaSQL = conexion.createStatement();
 		cdr = sentenciaSQL
-				.executeQuery("SELECT nombre,password FROM Tabla_admin where password='"+clave+"';");
-		while (cdr.next()) {
-		 kuenta = cdr.getString("nombre");
-			System.out.print(kuenta+"\n");
-		 pass = cdr.getString("password"); 
-			System.out.print(pass+"\n");			  
-		}
-		if(kuenta.equals(usuario) && pass.equals(clave)) {
-			conexion.close();
-			 System.out.print("Si jalo"+"\n"); 
-			 	
-		}
-		else{
-			conexion.close();
-			System.out.print("No jalo"+"\n");
-		}
+		.executeQuery("select* FROM Tabla_Alumno where ncuenta='"
+				+ clave + "';");
+while (cdr.next()) {
+	if (clave.equals(cdr.getString("ncuenta"))) {
+		sentenciaSQL
+				.executeUpdate("delete FROM Tabla_Alumno where ncuenta='"
+						+ clave + "';");
+		conexion.close();
+		System.out.print("Se ha borrado");
+	} else {
+		conexion.close();
+		System.out.print("no se borro");
+	}
+}
 		}
 		catch(Exception e){
 			System.out.print(e);
