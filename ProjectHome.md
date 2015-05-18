@@ -1,0 +1,1 @@
+Sistema de asistencia para los servicios de administración escolar, gestiona la información administrativa de centros escolares
